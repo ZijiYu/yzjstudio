@@ -163,6 +163,16 @@ a {
   background: var(--panel);
 }
 
+.nav-login {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.nav-row .btn-small {
+  margin-left: -12px;
+}
+
 /* buttons */
 .btn {
   display: inline-flex;
@@ -193,6 +203,139 @@ a {
 .btn-line:hover {
   background: var(--ink);
   color: var(--paper);
+}
+
+.btn-small {
+  min-height: 36px;
+  padding: 0 16px;
+  font-size: 0.92rem;
+}
+
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+button.btn {
+  font-family: inherit;
+  border: 0;
+  cursor: pointer;
+}
+
+button.btn-line {
+  background: none;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+}
+
+/* auth */
+.auth {
+  min-height: calc(100vh - 64px - 90px);
+  padding: clamp(40px, 8vw, 96px) 0;
+}
+
+.auth-card {
+  max-width: 440px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: clamp(24px, 4vw, 40px);
+}
+
+.auth-card-wide {
+  max-width: 620px;
+}
+
+.auth-card h1 {
+  font-size: 1.9rem;
+  letter-spacing: -0.02em;
+}
+
+.auth-card .lead {
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.auth-card > .btn,
+.auth-card > form > .btn {
+  margin-top: 24px;
+}
+
+.auth-form {
+  display: grid;
+  margin-top: 24px;
+}
+
+.auth-form label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 16px;
+}
+
+.auth-form label:first-of-type {
+  margin-top: 0;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+  font: inherit;
+  color: var(--ink);
+  margin-top: 6px;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.auth-form input:focus-visible {
+  outline-offset: 0;
+  border-color: var(--signal);
+}
+
+.auth-hint {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.auth-error {
+  margin-top: 16px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #fdeeee;
+  color: #a11d1d;
+  font-size: 0.95rem;
+}
+
+.auth-form .btn {
+  margin-top: 24px;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.auth-switch a {
+  color: var(--signal-deep);
+  font-weight: 600;
+}
+
+.account-list {
+  margin: 24px 0 0;
+}
+
+.account-list dt {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-top: 18px;
+}
+
+.account-list dd {
+  margin: 2px 0 0;
+  overflow-wrap: anywhere;
 }
 
 /* hero */
@@ -844,6 +987,12 @@ a {
   }
   .nav-row {
     gap: 12px;
+  }
+  .nav-login {
+    display: none;
+  }
+  .nav-row .btn-small {
+    margin-left: 0;
   }
 }
 
