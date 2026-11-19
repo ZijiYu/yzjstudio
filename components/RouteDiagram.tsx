@@ -29,8 +29,16 @@ export default function RouteDiagram({ t }: { t: Copy["diagram"] }) {
           />
         ))}
 
+        {/* response travelling back: backup lane → gateway → app */}
+        <path
+          className="route-wire route-back route-back-lane"
+          d={`M ${lx} ${lanes[1].y} C ${lx - 60} ${lanes[1].y}, ${gx + 96} ${gy}, ${gx + 44} ${gy}`}
+          pathLength={1}
+        />
+        <path className="route-wire route-back route-back-app" d={`M ${gx - 44} ${gy} H 122`} pathLength={1} />
+
         {/* app */}
-        <g>
+        <g className="route-app">
           <rect className="route-node" x="2" y={gy - 34} width="120" height="68" rx="10" />
           <text className="route-label" x="62" y={gy - 5} textAnchor="middle">
             {t.app}
